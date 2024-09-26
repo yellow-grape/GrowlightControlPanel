@@ -23,5 +23,5 @@ def ToggleLights():
         try:
             #light.state = light
              print("Turn on lugths")
-        except:print("Aww man")
+        except:print("not too bright are we")
         return 
