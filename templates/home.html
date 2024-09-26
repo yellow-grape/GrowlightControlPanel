@@ -3,12 +3,52 @@
 {% block title %}{{ section.title }}{% endblock %}
 
 {% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #cfeb9f;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+
 <h1>{{ section.title }}</h1>
 <p>Light is currently: {{ light }}</p>
-<h1>
-    <form action="change" method="get">
+<form action="change" method="get">
+    <label>
         <input type="checkbox" name="light" {% if light %}checked{% endif %}>
-        <input type="submit" value="Toggle Light">
-    </form>
-</h1>
+        Toggle Light
+    </label>
+    <input type="submit" value="Submit">
+
+
+</form>
+
+
+
+<h2>plants are cool!!!</h2>
 {% endblock %}
